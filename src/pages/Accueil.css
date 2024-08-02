@@ -1,0 +1,39 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65vh; /* Ajustez la hauteur */
+    padding: 0 80px; /* Ajustez le padding */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Ajustez l'espacement */
+}
+
+.hero-content .highlight {
+    color: #F03B46;
+}
+
+.hero-image {
+    width: 400px; /* Ajustez la largeur selon vos besoins */
+    height: auto;
+    border-radius: 200px;
+    max-width: 50%;
+}
+
+.services-accroche h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    margin-top: 0%;
+}
