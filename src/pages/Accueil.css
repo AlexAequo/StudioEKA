@@ -1,6 +1,6 @@
 .hero-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height: 65vh; /* Ajustez la hauteur */
     padding: 0 80px; /* Ajustez le padding */
@@ -24,16 +24,16 @@
 }
 
 .hero-image {
-    width: 400px; /* Ajustez la largeur selon vos besoins */
+    width: 400px; /* Ajustez la largeur */
     height: auto;
     border-radius: 200px;
     max-width: 50%;
 }
 
 .services-accroche h2 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     color: #000000;
-    margin-top: 0%;
+    
 }
