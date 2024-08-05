@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.titrecategorie-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; 
+    position: relative;
+    margin-top: 30px;
+}
+
+.text-box {
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 5px;
+    font-size: 2em; 
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 50px;
+    position: relative;
+    transform-origin: center;
+}
+
+.decouvrir {
+    background-color: #FF960C;
+    transform: rotate (350deg);
+    margin-left: -200px; /* Adjust this value to move the element more to the left */
+    
+}
+
+.realisations {
+    background-color: #F03B46;
+    transform: rotate (4deg);
+    margin-top: -20px; /* Adjust to ensure it appears below "Découvrir" without hiding text */
+    z-index: 0;
+}

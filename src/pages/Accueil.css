@@ -14,7 +14,7 @@
 }
 
 .hero-content h1 {
-    font-size: 64px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px; /* Ajustez l'espacement */
 }
@@ -35,5 +35,14 @@
     font-weight: bold;
     text-align: center;
     color: #000000;
-    
+
 }
+
+/* Style pour centrer le bouton CTA */
+.bouton-cta-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    margin-top: 30px; /* Ajoute de l'espace au-dessus du bouton */
+    margin-bottom: 20px; /* Ajoute de l'espace en-dessous du bouton */
+}
+

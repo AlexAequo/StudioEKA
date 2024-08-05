@@ -1,0 +1,101 @@
+.realisations-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 20px;
+}
+
+.realisations-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 408px;
+  max-height: 650px;
+  margin: auto;
+}
+
+.realisations-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Custom grid placements based on your provided layout */
+.image-1 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.image-2 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.image-3 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.image-4 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.image-5 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.image-6 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.image-7 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.image-8 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.image-9 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.image-10 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.image-11 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .realisations-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-2, .image-7 {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .realisations-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image-2, .image-3, .image-5, .image-7 {
+    grid-column: span 1;
+  }
+}
+
