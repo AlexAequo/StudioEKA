@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
 }
 
 .titrecategorie-container {
@@ -28,14 +27,13 @@
 
 .decouvrir {
     background-color: #FF960C;
-    transform: rotate (350deg);
-    margin-left: -200px; /* Adjust this value to move the element more to the left */
-    
+    transform: rotate(340deg);
+    margin-left: -240px; 
 }
 
-.realisations {
-    background-color: #F03B46;
-    transform: rotate (4deg);
-    margin-top: -20px; /* Adjust to ensure it appears below "Découvrir" without hiding text */
+.realisations1 {
+    background-color: #8E44AD;
+    transform: rotate(4deg);
+    margin-top: -10px;
     z-index: 0;
 }

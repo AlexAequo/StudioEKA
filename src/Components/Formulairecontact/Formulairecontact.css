@@ -1,0 +1,44 @@
+.form-container {
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    background-color: #28264B;
+    border-radius: 30px;
+  }
+  
+  .form-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .input-group input {
+    width: 48%;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #18A0FB;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: medium;
+    cursor: pointer;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }

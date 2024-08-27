@@ -1,0 +1,37 @@
+.bandeau-defilant {
+    width: 100%;
+    overflow: hidden;
+    background-color: #8E44AD;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.bandeau-contenu {
+    display: flex;
+    white-space: nowrap;
+    animation: defilement 20s linear infinite;
+}
+
+.bandeau-contenu span {
+    font-family: 'Segoe UI';
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.separator {
+    font-size: 2rem;
+    margin: 0 20px;
+}
+
+@keyframes defilement {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,101 @@
+.apropos-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.apropos-header {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.apropos-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #999;
+    margin: 0;
+}
+
+.apropos-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 5px 0;
+    color: #333;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.apropos-slash {
+    color: #1ABC9C;
+    margin-right: 10px;
+}
+
+.apropos-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px; /* Grand espace entre les paragraphes */
+    margin-bottom: 20px;
+    padding-bottom: 40px; /* Pour plus d'espace en bas */
+}
+
+.apropos-image-container {
+    position: relative;
+    width: auto;
+    display: flex;
+    align-items: center; /* Centre l'image verticalement par rapport au paragraphe */
+}
+
+.apropos-image {
+    height: auto; /* Ajuste la hauteur de l'image automatiquement */
+    max-height: 100%; /* Empêche l'image de dépasser la hauteur de son conteneur */
+    width: auto;
+    border-radius: 200px;
+    object-fit: cover; /* S'assure que l'image reste bien cadrée dans son conteneur */
+}
+
+.apropos-hover-bubble {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    background-color: #1ABC9C;
+    color: #fff;
+    border-radius: 15px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 9999;
+}
+
+.apropos-paragraph {
+    max-width: 400px; /* Réduction de la largeur pour laisser plus de place */
+    flex: 1;
+}
+
+.apropos-right {
+    text-align: right;
+    align-self: flex-start;
+
+}
+
+.apropos-left {
+    text-align: left;
+    align-self: flex-end;
+
+}
+
+.apropos-content p, .apropos-left p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+
+}
+.flag-emoji {
+    width: 20px; /* Ajustez la taille selon vos préférences */
+    height: 20px;
+    margin-left: 5px; /* Espace entre le texte et l'emoji */
+    vertical-align: middle; /* Assure que l'emoji est bien aligné avec le texte */
+}

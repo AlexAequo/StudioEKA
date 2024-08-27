@@ -1,7 +1,29 @@
+/* index.css */
+@font-face {
+  font-family: 'radiohead';
+  src: url('./fonts/radiohead.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bloopoly';
+  src: url('./fonts/Bloopoly.ttf') format('truetype');
+  /* Remplacez l'extension et le format selon votre fichier */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Giants';
+  src: url('./fonts/Giants.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Garde les autres styles inchangés */
 body {
-  margin: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Radiohead:wght@400;700&display=swap');
+
+.work-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap; /* Assure que le texte ne se brise pas */
+}
+
+.work-letter {
+    font-family: 'Radiohead', sans-serif;
+    font-size: clamp(10rem, 15vw, 20rem); /* Taille responsive pour occuper tout l'écran */
+    color: #333; /* Couleur du texte */
+    display: inline-block;
+    line-height: 1;
+    transform: rotate(-15deg); /* Inclinaison à 15 degrés */
+    /* Ajoute une ombre légère pour améliorer la visibilité */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}

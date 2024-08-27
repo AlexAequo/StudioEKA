@@ -1,8 +1,14 @@
+/* Boutoncta.css */
 .cta1 .cta-button1 {
     padding: 10px 30px;
-    background-color: #3889EC;
+    background-color: #076F94; /* Couleur du bouton mise à jour */
     color: white;
     text-decoration: none;
     border-radius: 50px;
-    font-size: 18px;
+    font-size: 20px; /* Taille de la police augmentée */
+    transition: background-color 0.3s ease;
+}
+
+.cta1 .cta-button1:hover {
+    background-color: #055b75; /* Couleur au survol */
 }
