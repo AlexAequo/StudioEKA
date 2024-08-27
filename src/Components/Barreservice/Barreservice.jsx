@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Barreservice.css';
+import communication from '../Assets/communication.png';
+import backoffice from '../Assets/backoffice.png';
+import development from '../Assets/development.png';
 
 import communication from '../Assets/communication.png';
 import backoffice from '../Assets/backoffice.png';
@@ -71,6 +74,7 @@ const Barreservice = () => {
                     </div>
                 </motion.div>
             ))}
+
         </div>
     );
 }
