@@ -1,101 +1,61 @@
+/* src/Components/Realisations/Realisations.css */
 .realisations-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Ajustez le gap ici */
+  padding: 20px; /* Ajustez la marge autour du conteneur */
+  justify-content: center;
 }
 
 .realisations-image {
-  position: relative;
-  overflow: hidden;
+  width: 300px;
+  height: 400px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 408px;
-  max-height: 650px;
-  margin: auto;
+  overflow: hidden;
+  position: relative;
+  margin: 20px;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.realisations-image img {
+.realisations-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.realisations-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
 
-/* Custom grid placements based on your provided layout */
-.image-1 {
-  grid-column: span 1;
-  grid-row: span 1;
+.realisations-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.image-2 {
-  grid-column: span 2;
-  grid-row: span 1;
+.realisations-image:hover .realisations-hover-overlay {
+  opacity: 1;
 }
 
-.image-3 {
-  grid-column: span 1;
-  grid-row: span 2;
+.wavy-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.image-4 {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
-.image-5 {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-.image-6 {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
-.image-7 {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-.image-8 {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
-.image-9 {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
-.image-10 {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
-.image-11 {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .realisations-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .image-2, .image-7 {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 768px) {
-  .realisations-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .image-2, .image-3, .image-5, .image-7 {
-    grid-column: span 1;
-  }
-}
-

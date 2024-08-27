@@ -1,0 +1,71 @@
+/* Hero.css */
+
+.hero-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 65vh;
+    padding: 0 80px;
+    background-image: url('../Assets/HEROS.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 50%;
+    color: #28264B;
+}
+
+.hero-content h1 {
+    font-size: 60px; /* Taille de la police augmentée */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content .highlight-inline {
+    display: inline-block;
+    vertical-align: baseline;
+    color: #8E44AD;
+}
+
+.word-rotate {
+    font-weight: bold;
+    font-size: inherit; /* Assure que le texte rotatif a la même taille que le texte principal */
+}
+
+button {
+    background-color: #055b75; /* Couleur du bouton mise à jour */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px; /* Taille du texte du bouton */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #055b75; /* Couleur du bouton au survol */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-section {
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+}

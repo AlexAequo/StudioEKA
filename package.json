@@ -3,22 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-three/drei": "^9.109.5",
+    "@react-three/fiber": "^8.16.8",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< Updated upstream
-=======
+    "animejs": "^3.2.2",
     "clsx": "^2.1.1",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^11.3.21",
->>>>>>> Stashed changes
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.13.0",
+    "react-lottie-player": "^2.1.0",
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
     "scrollreveal": "^4.0.9",
     "tailwind-merge": "^2.4.0",
     "tailwindcss": "^3.4.7",
+    "three": "^0.167.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-glsl": "^1.0.0"
   }
 }

@@ -1,40 +1,58 @@
-.Services {
+/* Barreservice.css */
+
+.services-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    background-color: #076F94;
-    height: 400px;
-    padding: 0 20px;
-    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.service-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.service-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    overflow: hidden;
+    color: #333;
+    text-align: center;
 }
 
-.circle {
-    width: 194px;
-    height: 194px;
-    background-color: #28264B;
-    border-radius: 50%;
+.service-content {
+    padding: 20px;
+}
+
+.service-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.icon {
-    position: absolute;
-    height: 147px;
-    right: 10px;
+.service-icon-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 
-h2 {
-    font-size: 24px;
+.service-title {
+    font-size: 18px;
     font-weight: bold;
-    color: white;
-    text-align: center;
+    color: #fff;
+}
+
+.service-description {
+    padding: 10px;
+}
+
+.service-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.service-description p {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
 }

@@ -1,32 +1,88 @@
-.header {
+/* Header.css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: #fff;
 }
 
-.logo a {
+.custom-logo {
+    display: flex;
+    align-items: center;
+    color: #8E44AD;
+}
+
+.custom-logo a {
     text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    color: #8E44AD;
 }
 
-.nav ul {
+.custom-nav ul {
     list-style: none;
     display: flex;
     gap: 80px;
 }
 
-.nav a {
+.custom-nav-link {
     text-decoration: none;
     color: #333;
     font-size: 18px;
     font-weight: bold;
+    position: relative;
+    transition: all 0.5s ease;
 }
 
-.cta-button {
+.custom-nav-link:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 20px;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) rotate(0deg) scale(0);
+    transition: all 1.5s cubic-bezier(.43, 1.91, .351, .74);
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.custom-nav-link:hover:after {
+    transform: translate(-50%, -50%) rotate(160deg) scale(1.2);
+}
+
+.custom-nav-link:hover {
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Couleurs spécifiques pour chaque lien */
+.custom-nav-link.presentation:after {
+    background: #28264B; /* Couleur pour "Presentation" */
+}
+
+.custom-nav-link.services:after {
+    background: #3889EC; /* Couleur pour "Services" */
+}
+
+.custom-nav-link.realisations:after {
+    background: #8E44AD; /* Couleur pour "Realisations" */
+}
+
+.custom-nav-link.blog:after {
+    background: #FF960C; /* Couleur pour "Blog" */
+}
+
+.custom-cta-button {
     padding: 10px 30px;
     background-color: #3889EC;
     color: white;
@@ -37,7 +93,7 @@
 }
 
 .jello-vertical {
-    animation: jello-vertical 0.9s linear both; /* Animation une seule fois */
+    animation: jello-vertical 0.9s linear both;
 }
 
 @keyframes jello-vertical {
@@ -48,4 +104,15 @@
     65% { transform: scale3d(1.05, .95, 1); }
     75% { transform: scale3d(.95, 1.05, 1); }
     100% { transform: scale3d(1, 1, 1); }
+}
+
+@media (max-width: 768px) {
+    .custom-nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .custom-nav-link {
+        font-size: 16px;
+    }
 }

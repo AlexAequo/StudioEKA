@@ -11,6 +11,7 @@ import Services from './pages/Services';
 import Realisations from './pages/Realisations';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Footer from './Components/Footer/Footer';
 import './index.css';
 
 const App = () => {
@@ -25,7 +26,8 @@ const App = () => {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
-            <Reseauxsociaux /> {/* Ajout du composant Reseauxsociaux */}
+            <Reseauxsociaux />
+            <Footer />
         </Router>
     );
 }

@@ -1,0 +1,80 @@
+.footer {
+  background-color: #006c8c;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-footer {
+  font-family: 'Radiohead', sans-serif; /* Assurez-vous que la police est correctement importée */
+  font-size: 34px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px; /* Espacement entre le texte du logo et la sous-phrase */
+}
+
+.logo-subtext {
+
+  font-size: 16px; /* Ajustez la taille de la police pour la sous-phrase */
+  color: white;
+  margin-top: 0; /* Assurez-vous qu'il n'y a pas de marge supplémentaire au-dessus du texte */
+  margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge supplémentaire en dessous du texte */
+  display: block; /* Assurez-vous que le texte s'affiche comme un bloc */
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.contact a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.social-media a {
+  margin-right: 10px;
+  color: white;
+  font-size: 1.2em;
+}
+
+.social-media a:hover {
+  color: #ccc;
+}

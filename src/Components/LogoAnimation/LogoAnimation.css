@@ -1,0 +1,14 @@
+/* LogoAnimation.css */
+
+.logo-text {
+    display: inline-block;
+    font-family: 'Radiohead', sans-serif; /* Assurez-vous que la police est correctement importée */
+    font-size: 34px;
+    font-weight: bold;
+    color: #8E44AD; /* Couleur violette pour le texte */
+}
+
+.logo-text span {
+    display: inline-block;
+    margin: 0 1px; /* Espacement entre les lettres */
+}

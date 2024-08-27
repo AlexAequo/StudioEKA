@@ -1,0 +1,56 @@
+.presentation-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.presentation-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #333;
+    text-align: right;
+}
+
+.presentation-section {
+    margin: 40px 0;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.presentation-header {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.presentation-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #999;
+    margin: 0;
+}
+
+.presentation-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 5px 0;
+    color: #333;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.presentation-slash {
+    color: #1ABC9C;
+    margin-right: 10px;
+}
+
+.presentation-content {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+ 

@@ -1,52 +1,289 @@
-.hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 65vh; /* Ajustez la hauteur */
-    padding: 0 80px; /* Ajustez le padding */
-}
+/* Accueil.css */
 
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 50%;
-}
-
-.hero-content h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px; /* Ajustez l'espacement */
-}
-
-.hero-content .highlight {
-    color: #F03B46;
-}
-
-.hero-image {
-    width: 400px; /* Ajustez la largeur selon vos besoins */
-    height: auto;
-    border-radius: 200px;
-    max-width: 50%;
-}
-
+/* Styles pour les services */
 .services-accroche h2 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     color: #000000;
-<<<<<<< Updated upstream
-    margin-top: 0%;
-}
-=======
 }
 
 /* Style pour centrer le bouton CTA */
 .bouton-cta-container {
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    margin-top: 30px; /* Ajoute de l'espace au-dessus du bouton */
-    margin-bottom: 20px; /* Ajoute de l'espace en-dessous du bouton */
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
->>>>>>> Stashed changes
+/* Styles pour la section full-page-image */
+.full-page-image-section {
+    position: relative;
+    width: 100%;
+    max-height: 360px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.full-page-image {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: cover;
+}
+
+.full-page-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: #28264B;
+    z-index: 10;
+}
+
+.full-page-text .highlight-text {
+    color: white;
+}
+
+/* Styles pour les articles de blog */
+.articles-section {
+    padding: 50px 0;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Styles pour la section testimonials */
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #F4F5F6;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    flex: 1;
+    text-align: left;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.testimonial-author strong {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+.testimonial-author span {
+    font-size: 15px;
+}
+
+/* Visiteurs mobiles */
+.mobile-visitor-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.mobile-visitor-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mobile-visitor-left {
+    position: relative;
+    flex: 1;
+}
+
+.blob-image {
+    position: absolute;
+    width: 300px;
+    height: auto;
+}
+
+.mobile-image {
+    position: relative;
+    width: 450px;
+    height: auto;
+}
+
+.mobile-visitor-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+.mobile-visitor-text {
+    margin-bottom: 20px;
+}
+
+.mobile-visitor-percentage {
+    font-size: 128px;
+    font-weight: bold;
+    color: #3889EC;
+}
+
+.mobile-visitor-description {
+    font-size: 55px;
+    font-weight: bold;
+    color: #000;
+}
+
+.mobile-visitor-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3889EC;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Styles pour la section contact */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 20px;
+}
+
+.contact-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-right {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.contact-right h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.contact-right .highlight-text {
+    color: #000000;
+}
+
+/* Styles pour la bulle de texte */
+.bubble-text-container {
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8E44AD;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 24px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.chiencontact-image {
+    width: 100%;
+    border-radius: 200px;
+    object-fit: cover;
+    max-width: 430px;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .full-page-text {
+        font-size: 40px;
+    }
+
+    .mobile-visitor-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobile-visitor-right {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .mobile-visitor-percentage {
+        font-size: 64px;
+    }
+
+    .mobile-visitor-description {
+        font-size: 32px;
+    }
+
+    .mobile-visitor-button {
+        font-size: 16px;
+    }
+
+    .testimonials-container {
+        flex-direction: column;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-left {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .chiencontact-image {
+        max-width: 100%;
+    }
+}
