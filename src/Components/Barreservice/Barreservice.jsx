@@ -4,10 +4,6 @@ import './Barreservice.css';
 import communication from '../Assets/communication.png';
 import backoffice from '../Assets/backoffice.png';
 import development from '../Assets/development.png';
-
-import communication from '../Assets/communication.png';
-import backoffice from '../Assets/backoffice.png';
-import development from '../Assets/development.png';
 import communicationIcon from '../Assets/communication-icone.png';
 import backofficeIcon from '../Assets/notion-icone.png';
 import developmentIcon from '../Assets/web-icone.png';
