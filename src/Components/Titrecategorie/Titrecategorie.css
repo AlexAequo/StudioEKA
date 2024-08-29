@@ -11,6 +11,7 @@
     margin-bottom: 2rem; 
     position: relative;
     margin-top: 30px;
+    text-align: center; /* Assure que le texte est centré horizontalement */
 }
 
 .text-box {
@@ -28,7 +29,7 @@
 .decouvrir {
     background-color: #FF960C;
     transform: rotate(340deg);
-    margin-left: -240px; 
+    /* Retirer les marges négatives pour éviter le débordement */
 }
 
 .realisations1 {
@@ -36,4 +37,36 @@
     transform: rotate(4deg);
     margin-top: -10px;
     z-index: 0;
+}
+
+/* Media queries pour ajuster le style en fonction de la taille de l'écran */
+
+@media (max-width: 1024px) {
+    .text-box {
+        font-size: 1.8em; /* Réduit légèrement la taille de la police pour les écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    .text-box {
+        font-size: 1.6em; /* Augmente la taille de la police pour les petits écrans */
+        padding: 12px 25px; /* Ajuste le padding */
+    }
+
+ 
+
+    .realisations1 {
+        margin-top: -5px; /* Réduit la marge top pour plus de cohérence */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-box {
+        font-size: 1.4em; /* Augmente encore la taille de la police pour les très petits écrans */
+        padding: 15px 20px; /* Ajuste le padding */
+    }
+
+    .realisations1 {
+        margin-top: 0; /* Évite les marges négatives */
+    }
 }

@@ -18,7 +18,7 @@ const Titrecategorie = ({ titre1, titre2 }) => {
                 className="text-box realisations1"
                 initial={{ y: 100, opacity: 0, rotate: -5.69 }}
                 whileInView={{ y: 0, opacity: 1, scale: [1, 1.1, 1], rotate: -5.69 }}
-                transition={{ type: 'spring', stiffness: 120, delay: 1.5 }}
+                transition={{ type: 'spring', stiffness: 120, delay: 0.7 }}
                 viewport={{ once: true }}
             >
                 {titre2}

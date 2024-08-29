@@ -1,0 +1,14 @@
+/* LoadingScreen.css */
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff; /* Changez cette couleur si nécessaire */
+    z-index: 9999; /* Assurez-vous qu'il est au-dessus de tout le reste */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

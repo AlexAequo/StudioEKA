@@ -2,20 +2,24 @@
 
 .services-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permet aux blocs de passer à la ligne suivante */
+    justify-content: space-between;
     padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .service-card {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: calc(33.333% - 40px); /* Ajuste la largeur en fonction de l'espace disponible */
     margin: 20px;
     overflow: hidden;
     color: #333;
     text-align: center;
+    flex-shrink: 0;
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
 
 .service-content {
@@ -29,12 +33,10 @@
     margin-bottom: 15px;
 }
 
-
 .service-icon-img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
-
 }
 
 .service-title {
@@ -57,4 +59,17 @@
     font-size: 14px;
     color: #ffffff;
     font-weight: bold;
+}
+
+/* Media queries pour des écrans plus petits */
+@media (max-width: 1200px) {
+    .service-card {
+        width: calc(50% - 40px); /* Deux cartes par ligne sur les grands écrans */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(100% - 40px); /* Une seule carte par ligne sur les écrans plus petits */
+    }
 }

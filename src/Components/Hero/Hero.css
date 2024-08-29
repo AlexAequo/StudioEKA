@@ -1,12 +1,10 @@
-/* Hero.css */
-
 .hero-section {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: flex-start; /* Aligne le contenu à gauche */
+    align-items: center; /* Centre verticalement */
     height: 65vh;
     padding: 0 80px;
-    background-image: url('../Assets/HEROS.png');
+    background-image: url('../Assets/HEROS.png'); /* Assure que l'image de fond est visible */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,13 +14,14 @@
 .hero-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Aligne le contenu à gauche */
     max-width: 50%;
     color: #28264B;
+    text-align: left; /* Aligne le texte à gauche */
 }
 
 .hero-content h1 {
-    font-size: 60px; /* Taille de la police augmentée */
+    font-size: 55px; /* Taille de la police */
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -38,26 +37,13 @@
     font-size: inherit; /* Assure que le texte rotatif a la même taille que le texte principal */
 }
 
-button {
-    background-color: #055b75; /* Couleur du bouton mise à jour */
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 20px; /* Taille du texte du bouton */
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.hero-content .cta1 {
+    margin-top: 20px; /* Ajuste l'espacement au-dessus du bouton */
 }
 
-button:hover {
-    background-color: #055b75; /* Couleur du bouton au survol */
-}
-
-/* Responsive styles */
+/* Styles responsive */
 @media (max-width: 768px) {
     .hero-section {
-        justify-content: center;
-        text-align: center;
         padding: 0 20px;
     }
 

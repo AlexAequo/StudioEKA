@@ -1,6 +1,8 @@
 import React from 'react';
 import Realisations1 from '../Components/Realisations/Realisations1';
 import './Realisations.css';
+import  My3DAnimation from '../Components/My3DAnimation/My3DAnimation'
+import  Kaleidoscope from '../Components/Kaleidoscope/Kaleidoscope'
 
 const Realisations = () => {
     return (
@@ -24,6 +26,8 @@ const Realisations = () => {
                 </div>
             </div>
             <Realisations1 />
+            <My3DAnimation /> {/* Ajout du composant 3D ici */}
+            <Kaleidoscope />
         </div>
     );
 };
