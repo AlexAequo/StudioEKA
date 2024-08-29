@@ -18,3 +18,10 @@
 .social-icon:hover {
     transform: scale(1.1);
 }
+
+/* Media query pour cacher le composant sur les petits écrans */
+@media (max-width: 768px) {
+    .social-container {
+        display: none;
+    }
+}

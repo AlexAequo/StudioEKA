@@ -1,5 +1,4 @@
-/* Header.css */
-
+/* Général */
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +13,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    position: relative;
+    z-index: 10;
 }
 
 .custom-logo {
@@ -25,6 +26,11 @@ body {
 .custom-logo a {
     text-decoration: none;
     color: #8E44AD;
+}
+
+.custom-nav {
+    display: flex;
+    gap: 80px;
 }
 
 .custom-nav ul {
@@ -92,27 +98,71 @@ body {
     display: inline-block;
 }
 
-.jello-vertical {
-    animation: jello-vertical 0.9s linear both;
+/* Animation burger et modale */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 11; /* Assure que l'icône est au-dessus de la modale */
 }
 
-@keyframes jello-vertical {
-    0% { transform: scale3d(1, 1, 1); }
-    30% { transform: scale3d(.75, 1.25, 1); }
-    40% { transform: scale3d(1.25, .75, 1); }
-    50% { transform: scale3d(.85, 1.15, 1); }
-    65% { transform: scale3d(1.05, .95, 1); }
-    75% { transform: scale3d(.95, 1.05, 1); }
-    100% { transform: scale3d(1, 1, 1); }
+.burger-menu.active {
+    position: fixed; /* Positionne l'icône sur la modale */
+    top: 20px;
+    right: 20px;
 }
 
+.burger-menu img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Overlay modale */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-height: 50vh; /* Limite la hauteur à 50% de la hauteur de la fenêtre */
+    background-color: rgba(0, 0, 0, 0.9); /* Fond noir légèrement moins transparent */
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start; /* Alignement en haut */
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-overlay.active {
+    display: flex;
+}
+
+.menu-nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 20px; /* Permet d'ajuster le contenu plus haut */
+}
+
+.menu-nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: color 0.3s ease;
+}
+
+.menu-nav-link:hover {
+    color: #3889EC;
+}
+
+/* Responsiveness */
 @media (max-width: 768px) {
-    .custom-nav ul {
-        flex-direction: column;
-        gap: 20px;
+    .custom-nav {
+        display: none;
     }
 
-    .custom-nav-link {
-        font-size: 16px;
+    .burger-menu {
+        display: block;
     }
 }

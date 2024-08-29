@@ -77,13 +77,11 @@
 .apropos-right {
     text-align: right;
     align-self: flex-start;
-
 }
 
 .apropos-left {
     text-align: left;
     align-self: flex-end;
-
 }
 
 .apropos-content p, .apropos-left p {
@@ -91,11 +89,49 @@
     line-height: 1.6;
     color: #555;
     margin: 0;
-
 }
+
 .flag-emoji {
     width: 20px; /* Ajustez la taille selon vos préférences */
     height: 20px;
     margin-left: 5px; /* Espace entre le texte et l'emoji */
     vertical-align: middle; /* Assure que l'emoji est bien aligné avec le texte */
+}
+
+/* Media queries pour rendre le composant responsive */
+
+@media (max-width: 1024px) {
+    .apropos-content {
+        gap: 50px; /* Réduit l'espace entre les paragraphes */
+    }
+
+    .apropos-title {
+        font-size: 2rem; /* Réduit la taille du titre */
+    }
+
+    .apropos-subtitle {
+        font-size: 12px; /* Réduit la taille du sous-titre */
+    }
+}
+
+@media (max-width: 768px) {
+    .apropos-content {
+        flex-direction: column; /* Change la disposition en colonne sur les petits écrans */
+        align-items: center; /* Centre les éléments horizontalement */
+        gap: 20px; /* Réduit l'espace entre les paragraphes */
+    }
+
+    .apropos-right, .apropos-left {
+        text-align: center; /* Centre le texte pour les petits écrans */
+        max-width: 100%; /* Ajuste la largeur maximale pour les petits écrans */
+    }
+
+    .apropos-image-container {
+        width: 100%; /* Adapte la largeur de l'image */
+        height: auto; /* Permet à l'image de s'adapter à la largeur */
+    }
+
+    .apropos-title {
+        font-size: 1.5rem; /* Réduit la taille du titre */
+    }
 }

@@ -1,10 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import './Barreservice.css';
-import communication from '../Assets/communication.png';
-import backoffice from '../Assets/backoffice.png';
-import development from '../Assets/development.png';
-
 import communication from '../Assets/communication.png';
 import backoffice from '../Assets/backoffice.png';
 import development from '../Assets/development.png';
@@ -44,6 +40,38 @@ const services = [
 ];
 
 const Barreservice = () => {
+    const [visibleCards, setVisibleCards] = useState({});
+    const cardRefs = useRef({});
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const newVisibleCards = {};
+            Object.keys(cardRefs.current).forEach(id => {
+                const element = cardRefs.current[id];
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    if (rect.top < windowHeight && rect.bottom > 0) {
+                        newVisibleCards[id] = true;
+                    } else {
+                        newVisibleCards[id] = false;
+                    }
+                }
+            });
+            setVisibleCards(newVisibleCards);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Check visibility on mount
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const variants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 }
+    };
+
     return (
         <div className="services-container">
             {services.map(service => (
@@ -52,9 +80,11 @@ const Barreservice = () => {
                     className="service-card"
                     style={{ backgroundColor: serviceColors[service.id] }}
                     whileHover={{ scale: 1.05, boxShadow: '0 12px 20px rgba(0, 0, 0, 0.2)' }}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial="hidden"
+                    animate={visibleCards[service.id] ? "visible" : "hidden"}
+                    variants={variants}
                     transition={{ duration: 0.5 }}
+                    ref={el => cardRefs.current[service.id] = el}
                 >
                     <div className="service-content">
                         <div className="service-header">
@@ -74,9 +104,9 @@ const Barreservice = () => {
                     </div>
                 </motion.div>
             ))}
-
         </div>
     );
-}
+};
 
 export default Barreservice;
+

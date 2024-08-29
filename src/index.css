@@ -32,3 +32,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.app-content {
+  position: relative;
+  z-index: 1;
+}
