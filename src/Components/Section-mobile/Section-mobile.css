@@ -1,0 +1,120 @@
+/* Section-mobile.css */
+
+/* Section des visiteurs mobiles */
+.mobile-visitor-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #ffffff; /* Fond blanc */
+}
+
+.mobile-visitor-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+    gap: 20px; /* Ajout d'un espace entre les éléments */
+}
+
+.mobile-visitor-left {
+    position: relative;
+    flex: 1;
+}
+
+.blob-lottie-animation {
+    position: absolute;
+    width: 300px; /* Ajusté pour une meilleure visibilité */
+    height: auto;
+}
+
+.mobile-image {
+    position: relative;
+    width: 100%;
+    max-width: 550px; /* Ajusté pour s'adapter à l'écran */
+    height: auto;
+    object-fit: cover;
+}
+
+.mobile-visitor-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centrer les éléments */
+    padding-left: 20px; /* Ajusté pour l'espacement */
+}
+
+.mobile-visitor-text {
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px;
+}
+
+.mobile-visitor-percentage {
+    font-size: 4rem; /* Ajusté pour l'affichage */
+    font-weight: bold;
+    color: #3889EC;
+    line-height: 1.2; /* Pour améliorer la lisibilité */
+}
+
+.mobile-visitor-description {
+    font-size: 2rem; /* Ajusté pour l'affichage */
+    font-weight: bold;
+    color: #000;
+    line-height: 1.2; /* Pour améliorer la lisibilité */
+}
+
+.mobile-visitor-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3889EC;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px; /* Espacement au-dessus du bouton */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mobile-visitor-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobile-visitor-right {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .mobile-visitor-percentage {
+        font-size: 3rem; /* Ajusté pour les petits écrans */
+    }
+
+    .mobile-visitor-description {
+        font-size: 1.5rem; /* Ajusté pour les petits écrans */
+    }
+
+    .mobile-visitor-button {
+        font-size: 1.2rem; /* Ajusté pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-visitor-percentage {
+        font-size: 2.5rem; /* Ajusté pour les très petits écrans */
+    }
+
+    .mobile-visitor-description {
+        font-size: 1.2rem; /* Ajusté pour les très petits écrans */
+    }
+
+    .mobile-visitor-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
