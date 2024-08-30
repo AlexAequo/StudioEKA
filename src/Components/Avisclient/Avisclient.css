@@ -1,0 +1,66 @@
+/* Avisclient.css */
+
+/* Styles pour la section testimonials */
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #F4F5F6;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    flex: 1 1 auto; /* Permet aux cartes de s'ajuster et de se centrer */
+    text-align: left;
+    margin: 10px; /* Ajoute un espacement autour des cartes */
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.testimonial-author strong {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+.testimonial-author span {
+    font-size: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column; /* Change la direction pour les petits écrans */
+        align-items: center; /* Centre les éléments horizontalement */
+    }
+
+    .testimonial-card {
+        max-width: 100%; /* Assure que les cartes ne dépassent pas la largeur de l'écran */
+        margin: 10px 0; /* Ajoute un espacement vertical entre les cartes */
+    }
+}

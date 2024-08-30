@@ -12,6 +12,7 @@ import Realisations from './pages/Realisations';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Footer from './Components/Footer/Footer';
+
 //import LoadingScreen from './Components/LoadingScreen/LoadingScreen'; // Importez le composant de chargement
 import './index.css';
 
