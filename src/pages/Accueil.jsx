@@ -79,12 +79,12 @@ const Accueil = () => {
                     <Formulairecontact />
                 </div>
                 <div className="contact-right">
-                    <div className="bubble-text-container">
-                        Vos <span className="highlight-text">idées</span>, notre flair !
-                    </div>
-                    <div className="image-wrapper">
-                        <img src={require('../Components/Assets/chiencontact.jpg')} alt="Chien Contact" className="chiencontact-image" />
-                    </div>
+                <div className="bubble-text-container">
+            Vos <span className="highlight-text">idées</span>, notre flair !
+        </div>
+        <div className="image-wrapper">
+            <img src={require('../Components/Assets/chiencontact.jpg')} alt="Chien Contact" className="chiencontact-image" />
+        </div>
                 </div>
             </section>
         </>

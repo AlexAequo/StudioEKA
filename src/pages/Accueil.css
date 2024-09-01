@@ -12,8 +12,8 @@
 .bouton-cta-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 /* Styles pour la section full-page-image */
@@ -110,6 +110,68 @@
 .testimonial-author span {
     font-size: 15px;
 }
+
+/* Styles pour la section contact */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 20px;
+}
+
+.contact-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-right {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.contact-right h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+
+}
+
+.contact-right .highlight-text {
+    color: #000000;
+
+}
+
+/* Styles pour la bulle de texte */
+.bubble-text-container {
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8E44AD;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 24px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+
+.chiencontact-image {
+    width: 100%;
+    border-radius: 200px;
+    object-fit: cover;
+    max-width: 430px;
+    height: auto;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
