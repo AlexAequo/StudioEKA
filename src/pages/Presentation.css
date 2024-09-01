@@ -1,9 +1,37 @@
+/* Container principal */
 .presentation-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 50px 20px;
 }
 
+/* Nouvelle section avec l'image et le titre */
+.header-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-image {
+    width: 600px;
+    height: 300px;
+    border-radius: 200px;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: #8E44AD;
+}
+
+.eka-title {
+    font-size: 3rem;
+    font-family: 'Radiohead', sans-serif;
+    color: #8E44AD; /* Violet pour le texte */
+}
+
+/* Titres et sections existantes */
 .presentation-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -18,9 +46,30 @@
     border-bottom: 1px solid #eee;
 }
 
+/* Flexbox  */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.reverse {
+    flex-direction: row-reverse; /* Change la direction des textes */
+}
+
+.section-image {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.section-text {
+    flex: 1;
+}
+
 .presentation-header {
     margin-bottom: 20px;
-    text-align: right;
+    text-align: left;
 }
 
 .presentation-subtitle {
@@ -36,21 +85,160 @@
     margin: 5px 0;
     color: #333;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
 .presentation-slash {
-    color: #1ABC9C;
+    color: #8E44AD;
     margin-right: 10px;
 }
 
-.presentation-content {
+.presentation-content p {
     font-size: 1.125rem;
     line-height: 1.6;
     color: #555;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 100%;
     text-align: justify;
 }
- 
+
+/* Section Valeurs avec fond orange */
+.valeurs-section {
+    display: flex;
+    align-items: flex-start;
+    background-color: #FF960C;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.valeurs-image-container {
+    flex: 0 0 40%;
+}
+
+.valeurs-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.valeurs-content {
+    flex: 1;
+    padding-left: 50px; /* Space between image and text */
+    color: #fff;
+}
+
+.valeurs-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.valeurs-subtitle {
+    color: #fff;
+}
+
+.valeurs-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.valeurs-values {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.valeurs-value {
+    flex: 1;
+    min-width: 200px;
+    background-color: #FF960C;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.valeurs-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .section-image {
+        width: 60%; /* Adjust width on medium screens */
+    }
+
+    .section-text {
+        max-width: 60%; /* Adjust text width on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.5rem;
+    }
+
+    .header-image {
+        width: 250px;
+        height: 150px;
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center text and image */
+    }
+
+    .section-image {
+        width: 80%; /* Adjust image width on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .section-text {
+        max-width: 100%; /* Ensure text takes full width */
+    }
+
+    .valeurs-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .valeurs-image-container {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .valeurs-values {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.25rem;
+    }
+
+    .header-image {
+        width: 200px;
+        height: 120px;
+    }
+
+    .presentation-title {
+        font-size: 1.75rem;
+    }
+
+    .presentation-content p {
+        font-size: 1rem;
+    }
+}

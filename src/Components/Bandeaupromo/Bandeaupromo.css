@@ -16,7 +16,7 @@
 .bandeaupromo-text {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 3rem; /* Utilisation de rem pour une meilleure adaptabilité */
@@ -33,7 +33,7 @@
 @media (max-width: 768px) {
     .bandeaupromo-text {
         font-size: 2rem; /* Réduction de la taille de la police */
-        left: 50%;
+        left: 30%;
         top: 45%;
     }
 }
@@ -41,7 +41,7 @@
 @media (max-width: 480px) {
     .bandeaupromo-text {
         font-size: 1.5rem; /* Encore plus petit pour les très petits écrans */
-        left: 50%;
+        left: 30%;
         top: 40%;
     }
 }
