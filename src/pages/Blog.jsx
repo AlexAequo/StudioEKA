@@ -3,32 +3,41 @@ import Cardarticleblog from '../Components/Cardarticleblog/Cardarticleblog';
 import articlenotion from '../Components/Assets/articlenotion.jpg';
 import articleprint from '../Components/Assets/articleprint.jpg';
 import articletendances from '../Components/Assets/articletendances.jpg';
+import './Blog.css'; // Assurez-vous d'avoir ce fichier
 
 const articles = [
     {
+        image: articletendances,
+        title: 'Les Dernières Tendances en Webdesign pour 2024',
+        category: 'Webdesign',
+        link: '/tendances-webdesign-2024'
+    },
+    {
         image: articlenotion,
-        title: 'Notion pour les Débutants',
+        title: 'Les Avantages de Notion par Rapport aux Autres Outils de Gestion',
         category: 'Productivité',
-        link: '/blog/notion-pour-debutants'
+        link: '/avantages-notion'
     },
     {
         image: articleprint,
-        title: "L'Impression 3D: Le Futur de la Fabrication",
-        category: 'Technologie',
-        link: '/blog/impression-3d'
-    },
-    {
-        image: articletendances,
-        title: 'Tendances de Design 2024',
+        title: 'Les Erreurs à Éviter Lors de la Création de Vos Supports Print',
         category: 'Design',
-        link: '/blog/tendances-design-2024'
+        link: '/erreurs-supports-print'
     }
 ];
 
 const Blog = () => {
     return (
-        <div>
-            <h1>Blog</h1>
+        <div className="blog-container">
+            <div className="blog-header">
+                <p className="blog-subtitle">NOTRE BLOG</p>
+                <h1 className="blog-title"><span className="blog-slash">/</span> Découvrez Nos Articles</h1>
+            </div>
+            <div className="blog-intro">
+                <p>
+                    Explorez notre blog pour des articles captivants sur les dernières tendances, conseils pratiques et innovations. Que vous cherchiez de l'inspiration ou des stratégies pour améliorer vos projets, nos articles sont conçus pour vous offrir des insights précieux.
+                </p>
+            </div>
             <div className="articles-container">
                 {articles.map((article, index) => (
                     <Cardarticleblog

@@ -81,14 +81,32 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .mobile-visitor-section {
+        padding: 30px 20px; /* Réduit le padding pour les petits écrans */
+    }
+
     .mobile-visitor-content {
         flex-direction: column;
         text-align: center;
     }
 
+    .mobile-visitor-left {
+        margin-bottom: 20px; /* Espace sous l'image et l'animation */
+        position: relative;
+    }
+
+    .blob-lottie-animation {
+        width: 200px; /* Ajuste la taille de l'animation pour les petits écrans */
+        top: 40%; /* Ajuste le positionnement pour les petits écrans */
+    }
+
     .mobile-visitor-right {
         padding-left: 0;
         margin-top: 20px;
+    }
+
+    .mobile-image {
+        max-width: 100%; /* Adapte la taille de l'image */
     }
 
     .mobile-visitor-percentage {
@@ -105,6 +123,15 @@
 }
 
 @media (max-width: 480px) {
+    .mobile-visitor-section {
+        padding: 20px 10px; /* Réduit encore le padding pour les très petits écrans */
+    }
+
+    .blob-lottie-animation {
+        width: 150px; /* Réduit la taille de l'animation pour les très petits écrans */
+        top: 5%; /* Ajuste le positionnement pour les très petits écrans */
+    }
+
     .mobile-visitor-percentage {
         font-size: 2.5rem; /* Ajusté pour les très petits écrans */
     }

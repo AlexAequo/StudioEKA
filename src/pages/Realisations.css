@@ -1,12 +1,11 @@
 .realisations-container {
-
     margin: 0 auto;
     padding: 50px 20px;
 }
 
 .realisations-header {
+    text-align: right; /* Aligne le titre et sous-titre à droite */
     margin-bottom: 20px;
-    text-align: right;
 }
 
 .realisations-subtitle {
@@ -22,41 +21,18 @@
     margin: 5px 0;
     color: #333;
     text-align: right; /* Aligne le titre à droite */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 .realisations-slash {
-    color: #1ABC9C;
+    color: #8E44AD;
     margin-right: 10px;
 }
 
 .realisations-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 100px; /* Grand espace entre les paragraphes */
     margin-bottom: 20px;
-    padding-bottom: 40px; /* Pour plus d'espace en bas */
 }
 
 .realisations-paragraph {
-    max-width: 400px; /* Réduction de la largeur pour laisser plus de place */
-    flex: 1;
-}
-
-.realisations-right {
-    text-align: right;
-    align-self: flex-start;
-}
-
-.realisations-left {
-    text-align: left;
-    align-self: flex-end;
-}
-
-.realisations-content p {
     font-size: 1.125rem;
     line-height: 1.6;
     color: #555;

@@ -1,7 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);  // Fait défiler la page en haut
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -12,17 +17,17 @@ const Footer = () => {
         <div className="footer-section navigation">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="#presentation">Présentation</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#realisations">Réalisations</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><Link to="/presentation" onClick={handleNavigation}>Présentation</Link></li>
+            <li><Link to="/services" onClick={handleNavigation}>Services</Link></li>
+            <li><Link to="/realisations" onClick={handleNavigation}>Réalisations</Link></li>
+            <li><Link to="/blog" onClick={handleNavigation}>Blog</Link></li>
           </ul>
         </div>
         <div className="footer-section pages">
-          <h4>Pages</h4>
+          <h4>Informations</h4>
           <ul>
-            <li><a href="#privacy-policy">Politique de confidentialité</a></li>
-            <li><a href="#text1">Mentions Légales</a></li>
+            <li><Link to="/informations" onClick={handleNavigation}>Politique de confidentialité</Link></li>
+            <li><Link to="/informations" onClick={handleNavigation}>Mentions Légales</Link></li>
           </ul>
         </div>
         <div className="footer-section contact">
