@@ -6,16 +6,10 @@ import flagBretagne from '../Assets/flag-bretagne.png';
 
 const Apropos = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
-    const [imageHeight, setImageHeight] = useState(0);
     const paragraphRef = useRef(null);
     const contentRef = useRef(null);
 
     useEffect(() => {
-        if (paragraphRef.current) {
-            setImageHeight(paragraphRef.current.clientHeight);
-        }
-
         const handleScroll = () => {
             if (contentRef.current) {
                 const rect = contentRef.current.getBoundingClientRect();
@@ -38,6 +32,11 @@ const Apropos = () => {
     const variants = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 }
+    };
+
+    const bubbleVariants = {
+        hidden: { opacity: 0, scale: 0.5 },
+        visible: { opacity: 1, scale: 1 }
     };
 
     return (
@@ -63,27 +62,25 @@ const Apropos = () => {
             >
                 <div 
                     className="apropos-image-container"
-                    style={{ height: `${imageHeight}px` }}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
                 >
                     <motion.img 
                         src={chienlunette1} 
                         alt="Chien avec lunettes" 
                         className="apropos-image"
-                        whileHover={{ scale: 1.05 }}
+                        initial="hidden"
+                        animate={isVisible ? "visible" : "hidden"}
+                        variants={variants}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
                     />
-                    {isHovered && (
-                        <motion.div 
-                            className="apropos-hover-bubble"
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                        >
-                            Chez Studio EKA on vous bichonne !
-                        </motion.div>
-                    )}
+                    <motion.div 
+                        className="apropos-hover-bubble"
+                        initial="hidden"
+                        animate={isVisible ? "visible" : "hidden"}
+                        variants={bubbleVariants}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.6, type: "spring", stiffness: 300, damping: 20 }}
+                    >
+                        Chez Studio EKA on vous bichonne !
+                    </motion.div>
                 </div>
                 <div className="apropos-paragraph apropos-right" ref={paragraphRef}>
                     <p>EKA Studio est spécialisé dans la communication digitale et print, ainsi que la création de solutions de gestion sur Notion. 
@@ -107,4 +104,5 @@ const Apropos = () => {
 };
 
 export default Apropos;
+
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Accueil.css';
 import Hero from '../Components/Hero/Hero';
 import ChienFull from '../Components/Assets/chienfull.jpg';
@@ -11,29 +12,30 @@ import Cardarticleblog from '../Components/Cardarticleblog/Cardarticleblog';
 import Formulairecontact from '../Components/Formulairecontact/Formulairecontact';
 import Bandeaupromo from '../Components/Bandeaupromo/Bandeaupromo';
 import SectionMobile from '../Components/Section-mobile/Section-mobile';
-import Avisclient from '../Components/Avisclient/Avisclient'; // Import du composant Avisclient
+import Avisclient from '../Components/Avisclient/Avisclient'; 
 import articlenotion from '../Components/Assets/articlenotion.jpg';
 import articleprint from '../Components/Assets/articleprint.jpg';
 import articletendances from '../Components/Assets/articletendances.jpg';
 
+// Tableau des articles mis à jour
 const articles = [
     {
+        image: articletendances,
+        title: 'Les Dernières Tendances en Webdesign pour 2024',
+        category: 'Webdesign',
+        link: '/tendances-webdesign-2024'
+    },
+    {
         image: articlenotion,
-        title: 'Notion pour les Débutants',
+        title: 'Les Avantages de Notion par Rapport aux Autres Outils de Gestion',
         category: 'Productivité',
-        link: '/blog/notion-pour-debutants'
+        link: '/avantages-notion'
     },
     {
         image: articleprint,
-        title: "L'Impression 3D: Le Futur de la Fabrication",
-        category: 'Technologie',
-        link: '/blog/impression-3d'
-    },
-    {
-        image: articletendances,
-        title: 'Tendances de Design 2024',
+        title: 'Les Erreurs à Éviter Lors de la Création de Vos Supports Print',
         category: 'Design',
-        link: '/blog/tendances-design-2024'
+        link: '/erreurs-supports-print'
     }
 ];
 
@@ -79,12 +81,17 @@ const Accueil = () => {
                     <Formulairecontact />
                 </div>
                 <div className="contact-right">
-                <div className="bubble-text-container">
-            Vos <span className="highlight-text">idées</span>, notre flair !
-        </div>
-        <div className="image-wrapper">
-            <img src={require('../Components/Assets/chiencontact.jpg')} alt="Chien Contact" className="chiencontact-image" />
-        </div>
+                    <motion.div
+                        className="bubble-text-container"
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                    >
+                        Vos <span className="highlight-text">idées</span>, notre flair !
+                    </motion.div>
+                    <div className="image-wrapper">
+                        <img src={require('../Components/Assets/chiencontact.jpg')} alt="Chien Contact" className="chiencontact-image" />
+                    </div>
                 </div>
             </section>
         </>

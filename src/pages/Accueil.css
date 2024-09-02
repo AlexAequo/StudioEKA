@@ -117,6 +117,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 50px 20px;
+    margin-top: 40px; 
 }
 
 .contact-left {
@@ -135,20 +136,18 @@
     font-weight: bold;
     margin-bottom: 20px;
     color: #000000;
-
 }
 
 .contact-right .highlight-text {
     color: #000000;
-
 }
 
 /* Styles pour la bulle de texte */
 .bubble-text-container {
     display: inline-block;
     position: absolute;
-    top: -30px;
-    left: 50%;
+    bottom: -40px; /* Ajuste pour apparaître en bas de l'image */
+    left: 30%;
     transform: translateX(-50%);
     background-color: #8E44AD;
     color: white;
@@ -157,12 +156,13 @@
     font-size: 24px;
     z-index: 10;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .image-wrapper {
     position: relative;
 }
-
 
 .chiencontact-image {
     width: 100%;
@@ -172,43 +172,17 @@
     height: auto;
 }
 
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .full-page-text {
         font-size: 40px;
     }
 
-    .mobile-visitor-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .mobile-visitor-right {
-        padding-left: 0;
-        margin-top: 20px;
-    }
-
-    .mobile-visitor-percentage {
-        font-size: 64px;
-    }
-
-    .mobile-visitor-description {
-        font-size: 32px;
-    }
-
-    .mobile-visitor-button {
-        font-size: 16px;
-    }
-
-    .testimonials-container {
-        flex-direction: column;
-    }
-
     .contact-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-top: 20px; /* Réduit l'espace au-dessus pour les petits écrans */
     }
 
     .contact-left {
@@ -218,5 +192,31 @@
 
     .chiencontact-image {
         max-width: 100%;
+        height: auto;
+    }
+
+    .bubble-text-container {
+        bottom: -40px; /* Ajuste pour la version mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .full-page-text {
+        font-size: 30px;
+    }
+
+    .contact-right h2 {
+        font-size: 36px;
+    }
+
+    .bubble-text-container {
+        font-size: 18px;
+        padding: 8px 16px;
+        bottom: -30px; /* Ajuste pour les très petits écrans */
+    }
+
+    .chiencontact-image {
+        max-width: 100%;
+        height: auto;
     }
 }

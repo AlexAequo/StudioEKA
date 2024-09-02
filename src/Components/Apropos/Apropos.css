@@ -1,3 +1,4 @@
+/* Conteneur général */
 .apropos-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -9,6 +10,7 @@
     text-align: right;
 }
 
+/* Sous-titre */
 .apropos-subtitle {
     font-size: 14px;
     letter-spacing: 2px;
@@ -16,6 +18,7 @@
     margin: 0;
 }
 
+/* Titre principal */
 .apropos-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -27,41 +30,48 @@
 }
 
 .apropos-slash {
-    color: #1ABC9C;
+    color: #8E44AD;
     margin-right: 10px;
 }
 
+/* Contenu principal */
 .apropos-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 100px; /* Grand espace entre les paragraphes */
+    gap: 100px; 
     margin-bottom: 20px;
-    padding-bottom: 40px; /* Pour plus d'espace en bas */
+    padding-bottom: 40px; 
 }
 
+/* Conteneur d'image */
 .apropos-image-container {
     position: relative;
-    width: auto;
     display: flex;
-    align-items: center; /* Centre l'image verticalement par rapport au paragraphe */
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
 }
 
+/* Image */
 .apropos-image {
-    height: auto; /* Ajuste la hauteur de l'image automatiquement */
-    max-height: 100%; /* Empêche l'image de dépasser la hauteur de son conteneur */
-    width: auto;
+    width: 100%; 
+    height: auto;
     border-radius: 200px;
-    object-fit: cover; /* S'assure que l'image reste bien cadrée dans son conteneur */
+    object-fit: cover; 
 }
 
+/* Bulle d'information */
 .apropos-hover-bubble {
     position: absolute;
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 15px;
-    background-color: #1ABC9C;
+    background-color: #8E44AD;
     color: #fff;
     border-radius: 15px;
     white-space: nowrap;
@@ -69,8 +79,9 @@
     z-index: 9999;
 }
 
+/* Paragraphe */
 .apropos-paragraph {
-    max-width: 400px; /* Réduction de la largeur pour laisser plus de place */
+    max-width: 400px;
     flex: 1;
 }
 
@@ -92,46 +103,63 @@
 }
 
 .flag-emoji {
-    width: 20px; /* Ajustez la taille selon vos préférences */
+    width: 20px;
     height: 20px;
-    margin-left: 5px; /* Espace entre le texte et l'emoji */
-    vertical-align: middle; /* Assure que l'emoji est bien aligné avec le texte */
+    margin-left: 5px;
+    vertical-align: middle;
 }
 
 /* Media queries pour rendre le composant responsive */
-
 @media (max-width: 1024px) {
     .apropos-content {
-        gap: 50px; /* Réduit l'espace entre les paragraphes */
+        gap: 50px;
     }
 
     .apropos-title {
-        font-size: 2rem; /* Réduit la taille du titre */
+        font-size: 2rem;
     }
 
     .apropos-subtitle {
-        font-size: 12px; /* Réduit la taille du sous-titre */
+        font-size: 12px;
     }
 }
 
 @media (max-width: 768px) {
     .apropos-content {
-        flex-direction: column; /* Change la disposition en colonne sur les petits écrans */
-        align-items: center; /* Centre les éléments horizontalement */
-        gap: 20px; /* Réduit l'espace entre les paragraphes */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .apropos-right, .apropos-left {
-        text-align: center; /* Centre le texte pour les petits écrans */
-        max-width: 100%; /* Ajuste la largeur maximale pour les petits écrans */
+        text-align: center;
+        max-width: 100%;
     }
 
     .apropos-image-container {
-        width: 100%; /* Adapte la largeur de l'image */
-        height: auto; /* Permet à l'image de s'adapter à la largeur */
+        max-width: 80%;
     }
 
     .apropos-title {
-        font-size: 1.5rem; /* Réduit la taille du titre */
+        font-size: 1.5rem;
+    }
+
+    .apropos-hover-bubble {
+        top: auto;
+        bottom: -20px; /* Place la bulle en bas de l'image */
+        transform: translateX(-50%);
+        padding: 8px 12px;
+        font-size: 12px; /* Réduit la taille de la bulle */
+    }
+}
+
+@media (max-width: 480px) {
+    .apropos-image-container {
+        max-width: 60%;
+    }
+
+    .apropos-hover-bubble {
+        padding: 6px 10px;
+        font-size: 10px; /* Réduit encore la taille de la bulle pour les très petits écrans */
     }
 }

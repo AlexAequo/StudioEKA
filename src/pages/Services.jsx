@@ -5,9 +5,7 @@ import './Services.css';
 const Services = () => {
     return (
         <div className="services-container">
-            <Barreservice />  {/* La barre de service reste en haut */}
-
-            <div className="services-content">
+                        <div className="services-content">
                 <div className="services-header">
                     <p className="services-subtitle">NOS SERVICES</p>
                     <h2 className="services-title"><span className="services-slash">/</span> Studio EKA</h2>
@@ -18,6 +16,9 @@ const Services = () => {
                         Chez Studio EKA, nous ne faisons pas que développer des sites web ou gérer votre back-office : nous insufflons à chaque projet un petit quelque chose en plus, un vent frais de Bretagne et une touche de créativité qui a du chien. Découvrez comment nous pouvons transformer votre communication et votre gestion quotidienne en un jeu d'enfant.
                     </p>
                 </div>
+            <Barreservice />  
+
+
 
                 <div className="services-section">
                     <div className="services-header">
